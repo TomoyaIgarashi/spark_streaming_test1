@@ -7,16 +7,12 @@ import org.apache.spark.streaming._
 import org.apache.spark.streaming.twitter._
 import org.apache.spark.streaming.StreamingContext._
 
+import sample.spark.Helper
+
 object SimpleApp {
   def main(args: Array[String]) {
 
-    System.setProperty("twitter4j.oauth.consumerKey", "YourTwitterConsumerKey")
-
-    System.setProperty("twitter4j.oauth.consumerSecret", "YourTwitterConsumerSecret")
-
-    System.setProperty("twitter4j.oauth.accessToken", "YourTwitterAccessToken")
-
-    System.setProperty("twitter4j.oauth.accessTokenSecret", "YourTwitterAccessTokenSecret")
+    Helper.configureTwitterCredentials()
 
     val checkpointDir = "./hdfs/checkpoint/"
 

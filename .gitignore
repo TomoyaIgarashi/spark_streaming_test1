@@ -1,4 +1,7 @@
+.*.swp
 
+hdfs/
+twitter.txt
 
 # Added by gemignore. Snippet 'Scala'
 *.class
